@@ -2,8 +2,8 @@ name: Deploy to Staging
 
 on:
   push:
-    branches:
-      - main
+    tags:
+    - 'v*'
 
 jobs:
 
@@ -22,4 +22,4 @@ jobs:
     
     - run: rojo build -o game.rbxl
 
-    - run: rbxcloud experience publish -f game.rbxl -t published -p 15581656624 -u 5379344698 -a ${{ secrets.API_KEY }}
+    - run: rbxcloud experience publish -f game.rbxl -t published -p 15582166969 -u 5379557157 -a ${{ secrets.API_KEY }}
