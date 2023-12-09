@@ -1,7 +1,7 @@
 print("Update!")
 
 local function Hello()
-	print("Hello")
+	print("Hello1")
 end
 
 Hello()
