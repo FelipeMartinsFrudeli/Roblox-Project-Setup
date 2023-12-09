@@ -20,6 +20,6 @@ jobs:
         version: "^1.0.0"
         token: ${{ SECRETS.GITHUB_TOKEN }}
     
-    -run: rojo build -o game.rbxl
+    - run: rojo build -o game.rbxl
 
-    -run: rbxcloud experience publish -f game.rbxl -t published -p 15581656624 -u 5379344698 -a ${{ secrets.API_KEY }}
+    - run: rbxcloud experience publish -f game.rbxl -t published -p 15581656624 -u 5379344698 -a ${{ secrets.API_KEY }}
