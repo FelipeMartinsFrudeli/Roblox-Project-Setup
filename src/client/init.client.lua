@@ -1,4 +1,4 @@
-print("Hello world, from client!")
+print("Update!")
 
 local function Hello()
 	print("Hello")
