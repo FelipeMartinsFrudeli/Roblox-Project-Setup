@@ -9,10 +9,9 @@ on:
     - main
 
 jobs:
-
   lint:
     name: Lint
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
     - name: Checkout code
       uses: actions/checkout@v3
@@ -25,14 +24,14 @@ jobs:
     
     - name: Lint
       run: |
-        selene ./modules
+        selene ./src
   
   style:
     name: Styling
-    runs-on: ubunto-latest
+    runs-on: ubuntu-latest
     steps:
     - uses: actions/checkout@v3
     - uses: JohnnyMorganz/stylua-action@1.0.0
       with:
         token: ${{ secrets.GITHUB_TOKEN }}
-        args: --check
+        args: --check .
